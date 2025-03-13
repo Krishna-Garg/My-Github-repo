@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.candle {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+.wax {
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.flame {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 20px;
+    height: 30px;
+    background: orange;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1.5s infinite alternate ease-in-out;
+}
+
+.inner-flame {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: yellow;
+    border-radius: 50%;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+    animation: flickerInner 1.2s infinite alternate ease-in-out;
+}
+
+/* Sparks */
+.spark {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: sparkAnimation 1.5s infinite ease-in-out alternate;
+}
+
+.spark1 {
+    top: -40px;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.spark2 {
+    top: -45px;
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+.spark3 {
+    top: -50px;
+    left: 45%;
+    animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    50% {
+        transform: translateX(-52%) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(-48%) scale(1);
+    }
+}
+
+@keyframes flickerInner {
+    0% {
+        opacity: 0.9;
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes sparkAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
