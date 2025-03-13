@@ -17,16 +17,19 @@ h1 {
 /*rgb(red,green,blue)*/
 .red {
     background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
 }
 
 /*#(XX(red)XX(green)XX(blue)) values(0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)*/
 .green {
     background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
 }
 
 /*hsl()*/
 .blue {
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
 }
 
 .cap {
