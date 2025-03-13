@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
+.marker {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+}
+
+/*linear-gradient(rotation, color1,color2,color3,...)*/
+/*rgb(red,green,blue)*/
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+}
+
+/*#(XX(red)XX(green)XX(blue)) values(0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)*/
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+}
+
+/*hsl()*/
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+}
