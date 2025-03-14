@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey to help us improve our services.</p>
+    </header>
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" placeholder="Enter your age" min="18" max="100">
+
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select id="dropdown" name="role">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+        </select>
+
+        <fieldset>
+            <legend>Would you recommend our services?</legend>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What features do you like?</legend>
+            <label><input type="checkbox" value="design"> Design</label>
+            <label><input type="checkbox" value="usability"> Usability</label>
+            <label><input type="checkbox" value="performance"> Performance</label>
+        </fieldset>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+
+</html>
